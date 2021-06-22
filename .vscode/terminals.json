@@ -1,0 +1,21 @@
+{
+    "autokill": true,
+    "terminals": [
+        {
+            "name": "👨🏽‍💻🔥 Develop",
+            "command": "npm run develop"
+        },
+        {
+            "name": "🧪🔥 Test watch",
+            "command": "npm run test-watch"
+        },
+        {
+            "name": "🏭 Generate main exports",
+            "command": "npm run generate-main-exports"
+        },
+        {
+            "name": "🏭 Generate documentation",
+            "command": "npm run documentation"
+        }
+    ]
+}
