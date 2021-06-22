@@ -9,32 +9,34 @@ import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
 import { IRegisterItemsOptions } from './IRegisterItemsOptions';
 import { ISubscription } from './ISubscription';
-import { IQueueOptions, Queue } from './Queue';
+import { IQueueOptions } from './Queue';
+import { Queue } from './Queue';
 import { Queues } from './Queues';
 import { registerItemsInArray } from './registerItemsInArray';
 import { registerItemsInSubjectOfArrays } from './registerItemsInSubjectOfArrays';
 import { registerPairsInObject } from './registerPairsInObject';
 import { Registration } from './Registration';
 import { softDestroy } from './softDestroy';
-import { ITeardownLogic, teardown } from './TeardownLogic';
+import { ITeardownLogic } from './TeardownLogic';
+import { teardown } from './TeardownLogic';
 
 export {
-    Queue,
-    Queues,
-    teardown,
-    IAwaitable,
-    softDestroy,
-    Registration,
-    IDestroyable,
-    IQueueOptions,
-    ISubscription,
-    NotFoundError,
-    ITeardownLogic,
-    CollisionError,
-    DestroyableLoop,
-    registerItemsInArray,
-    registerPairsInObject,
-    IRegisterItemsOptions,
-    AlreadyDestroyedError,
-    registerItemsInSubjectOfArrays,
+Queue,
+Queues,
+teardown,
+IAwaitable,
+softDestroy,
+Registration,
+IDestroyable,
+IQueueOptions,
+ISubscription,
+NotFoundError,
+ITeardownLogic,
+CollisionError,
+DestroyableLoop,
+registerItemsInArray,
+registerPairsInObject,
+IRegisterItemsOptions,
+AlreadyDestroyedError,
+registerItemsInSubjectOfArrays
 };
