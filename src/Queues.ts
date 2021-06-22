@@ -12,7 +12,7 @@ export class Queues<K, V> extends Destroyable implements IDestroyable {
         super();
     }
 
-    getQueue(key: K): Queue<V> {
+    public getQueue(key: K): Queue<V> {
         const existingQueue = this.queues.get(key);
         if (existingQueue) {
             return existingQueue;

@@ -2,6 +2,5 @@
  * @collboard-modules-sdk
  */
 export class NotFoundError extends Error {
-    readonly name = 'NotFoundError';
+    public readonly name = 'NotFoundError';
 }
-

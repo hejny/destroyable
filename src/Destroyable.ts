@@ -12,7 +12,14 @@ import { ITeardownLogic, teardown } from './TeardownLogic';
  * @collboard-modules-sdk
  */
 export abstract class Destroyable implements IDestroyable {
+    // tslint:disable-next-line
     private _destroyed = false;
+
+    private subdestroyable: ITeardownLogic[] = [];
+
+    /**
+     * TODO: !!! isDestroyed
+     */
     public get destroyed(): boolean {
         return this._destroyed;
     }
@@ -26,28 +33,31 @@ export abstract class Destroyable implements IDestroyable {
     }
 
     /**
-     * Checks, whether the object is not destroyed
-     *
-     * @param errorMessage Message that will replace default one before error
-     * @param runBeforeError Callback runed before error is thrown; typically this can be some logging
-     */
-    protected checkWhetherNotDestroyed(errorMessage?: string, runBeforeError?: () => void) {
-        if (this._destroyed) {
-            if (runBeforeError) {
-                runBeforeError();
-            }
-            throw new AlreadyDestroyedError(errorMessage || `This object is already destroyed.`);
-        }
-    }
-
-    private subdestroyable: ITeardownLogic[] = [];
-
-    /**
      * Binds new registration with itself. This registration/destroyable will be destroyed with this.
      */
     public addSubdestroyable(...subdestroyable: ITeardownLogic[]): this {
         // TODO: create remove counterpart to add
         this.subdestroyable.push(...subdestroyable);
         return this;
+    }
+
+    /**
+     * Checks, whether the object is not destroyed
+     *
+     * @param errorMessage Message that will replace default one before error
+     * @param runBeforeError Callback runed before error is thrown; typically this can be some logging
+     */
+    protected checkWhetherNotDestroyed(
+        errorMessage?: string,
+        runBeforeError?: () => void,
+    ) {
+        if (this._destroyed) {
+            if (runBeforeError) {
+                runBeforeError();
+            }
+            throw new AlreadyDestroyedError(
+                errorMessage || `This object is already destroyed.`,
+            );
+        }
     }
 }

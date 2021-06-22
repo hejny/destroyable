@@ -2,5 +2,5 @@
  * @collboard-modules-sdk
  */
 export class CollisionError extends Error {
-    readonly name = 'CollisionError';
+    public readonly name = 'CollisionError';
 }

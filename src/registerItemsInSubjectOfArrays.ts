@@ -1,5 +1,5 @@
 import { Subject } from 'rxjs' /* TODO: Shrink just to an interface */;
-import { Registration } from './Registration';
+import { Registration } from "./Registration";
 
 /**
  * @deprecated TODO: instead of this interface use shared IRegisterItemsOptions
@@ -43,7 +43,7 @@ export function registerItemsInSubjectOfArrays<T>({
     return new Registration(() => {
         subscription.unsubscribe();
 
-        if (baseFrameLast === null) return;
+        if (baseFrameLast === null){ return;   }
 
         baseFrameLast = [...baseFrameLast];
 

@@ -3,5 +3,5 @@
  */
 
 export class AlreadyDestroyedError extends Error {
-    readonly name = 'AlreadyDestroyedError';
+    public readonly name = 'AlreadyDestroyedError';
 }
