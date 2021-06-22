@@ -1,16 +1,16 @@
 
-# build
+# Build
 /lib
 /dist
 /typings
 
-# dependencies
+# Dependencies
 /node_modules
 
-# testing
+# Testing
 /coverage
 
-# misc
+# Misc
 .DS_Store
 .env.local
 .env.development.local

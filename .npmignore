@@ -1,0 +1,25 @@
+# Source
+/src
+
+# Test
+/test
+
+# Development
+/.github
+/.vscode
+/scripts
+/.editorconfig
+/.gitattributes
+/.gitignore
+/.prettierrc
+/jestconfig.json
+/tslint.json
+
+# Documentation
+/docs
+
+# Testing
+/coverage
+
+# Dependencies
+/node_modules
