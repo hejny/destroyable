@@ -26,7 +26,7 @@ async function main() {
     for (const file of files) {
         let execArray: any; // RegExpExecArray | null;
         const regExp =
-            /^export\s+(?!abstract)\s*(async)?\s*[a-z]+\s+(?<name>[a-zA-Z0-9_]+)/gm;
+            /^(export\s+)(abstract\s+)?(async\s+)?(?<type>[a-z]+\s+)(?<name>[a-zA-Z0-9_]+)/gm;
         while ((execArray = regExp.exec(file.content))) {
             const { name } = execArray.groups!;
             exports.push({ path: file.path, name });

@@ -2,6 +2,7 @@
 // ⚠️ Warning: Do not edit by hand, all changes will be lost on next execution!
 
 import { AlreadyDestroyedError } from './AlreadyDestroyedError';
+import { Destroyable } from './Destroyable';
 import { DestroyableLoop } from './DestroyableLoop';
 import { CollisionError } from './errors/CollisionError';
 import { NotFoundError } from './errors/NotFoundError';
@@ -21,6 +22,7 @@ export {
 teardown,
 IAwaitable,
 softDestroy,
+Destroyable,
 Registration,
 IDestroyable,
 ISubscription,
