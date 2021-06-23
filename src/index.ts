@@ -9,9 +9,6 @@ import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
 import { IRegisterItemsOptions } from './IRegisterItemsOptions';
 import { ISubscription } from './ISubscription';
-import { IQueueOptions } from './Queue';
-import { Queue } from './Queue';
-import { Queues } from './Queues';
 import { registerItemsInArray } from './registerItemsInArray';
 import { registerItemsInSubjectOfArrays } from './registerItemsInSubjectOfArrays';
 import { registerPairsInObject } from './registerPairsInObject';
@@ -21,14 +18,11 @@ import { ITeardownLogic } from './TeardownLogic';
 import { teardown } from './TeardownLogic';
 
 export {
-Queue,
-Queues,
 teardown,
 IAwaitable,
 softDestroy,
 Registration,
 IDestroyable,
-IQueueOptions,
 ISubscription,
 NotFoundError,
 ITeardownLogic,
