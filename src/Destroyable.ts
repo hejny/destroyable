@@ -13,19 +13,19 @@ import { ITeardownLogic, teardown } from './TeardownLogic';
  */
 export abstract class Destroyable implements IDestroyable {
     // tslint:disable-next-line
-    private _destroyed = false;
+    private _isDestroyed = false;
 
     private subdestroyable: ITeardownLogic[] = [];
 
     /**
      * TODO: !!! isDestroyed
      */
-    public get destroyed(): boolean {
-        return this._destroyed;
+    public get isDestroyed(): boolean {
+        return this._isDestroyed;
     }
     public async destroy(): Promise<void> {
         this.checkWhetherNotDestroyed();
-        this._destroyed = true;
+        this._isDestroyed = true;
         // console.log(`Destroying`, this);
         for (const subdestroyable of this.subdestroyable) {
             await teardown(subdestroyable);
@@ -51,7 +51,7 @@ export abstract class Destroyable implements IDestroyable {
         errorMessage?: string,
         runBeforeError?: () => void,
     ) {
-        if (this._destroyed) {
+        if (this._isDestroyed) {
             if (runBeforeError) {
                 runBeforeError();
             }

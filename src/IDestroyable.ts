@@ -9,7 +9,7 @@ export interface IDestroyable {
     /**
      * Is destroyed?
      */
-    readonly destroyed: boolean;
+    readonly isDestroyed: boolean;
 
     /**
      * Destroy the object
