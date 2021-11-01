@@ -1,6 +1,6 @@
 {
     "name": "destroyable",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "description": "Multiple utilities that help to build destroyable objects in javascript",
     "author": "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
     "contributors": [
