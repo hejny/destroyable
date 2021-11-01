@@ -52,8 +52,7 @@ export class Registration extends Destroyable implements IDestroyable {
             ).then(),
         );
     }
-    public static loop(tick: ITick): Registration;
-    public static loop(options: { tick: ITick; waiter: IWaiter }): Registration;
+
     public static loop(
         optionsOrTick: ITick | { tick: ITick; waiter: IWaiter },
     ): Registration {
