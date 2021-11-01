@@ -10,6 +10,9 @@ import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
 import { IRegisterItemsOptions } from './IRegisterItemsOptions';
 import { ISubscription } from './ISubscription';
+import { IWork } from './IWork';
+import { ITick } from './IWork';
+import { IWaiter } from './IWork';
 import { registerItemsInArray } from './registerItemsInArray';
 import { registerItemsInSubjectOfArrays } from './registerItemsInSubjectOfArrays';
 import { registerPairsInObject } from './registerPairsInObject';
@@ -19,6 +22,9 @@ import { ITeardownLogic } from './TeardownLogic';
 import { teardown } from './TeardownLogic';
 
 export {
+ITick,
+IWork,
+IWaiter,
 teardown,
 IAwaitable,
 softDestroy,
