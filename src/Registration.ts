@@ -17,10 +17,16 @@ export class Registration extends Destroyable implements IDestroyable {
      * TODO: Use in all places where manually setting up  pair things
      */
     public static create(
-        creator: () => IAwaitable<ITeardownLogic>,
+        creator: (utils: {
+            isDestroyed: () => boolean;
+        }) => IAwaitable<ITeardownLogic | void>,
     ): Registration {
-        const teardownLogic = creator();
+        let isDestroyed = false;
+
+        const teardownLogic = creator({ isDestroyed: () => isDestroyed });
+
         return new Registration(async () => {
+            isDestroyed = true;
             await teardown(await teardownLogic);
         });
     }
@@ -32,7 +38,7 @@ export class Registration extends Destroyable implements IDestroyable {
      * @returns one registration that will be destroyed when this one is destroyed
      */
     public static join(
-        ...registrations: Array<IAwaitable<IDestroyable | undefined>>
+        ...registrations: Array<IAwaitable<IDestroyable>>
     ): Registration {
         return new Registration(() =>
             Promise.all(
@@ -45,7 +51,17 @@ export class Registration extends Destroyable implements IDestroyable {
             ).then(),
         );
     }
-    
+
+    public static loop(tick: () => IAwaitable<void>): Registration {
+        return Registration.create(async ({ isDestroyed }) => {
+            while (true) {
+                await tick();
+                if (isDestroyed()) {
+                    return;
+                }
+            }
+        });
+    }
 
     /**
      * Create registration from a subscription

@@ -10,8 +10,12 @@ export type ITeardownLogic = (() => IAwaitable<void>) | IDestroyable;
  *
  * @collboard-modules-sdk
  */
-export async function teardown(teardownLogic: ITeardownLogic): Promise<void> {
-    if (typeof teardownLogic === 'function') {
+export async function teardown(
+    teardownLogic?: ITeardownLogic | void,
+): Promise<void> {
+    if (teardownLogic === undefined) {
+        return;
+    } else if (typeof teardownLogic === 'function') {
         return teardownLogic();
     } else {
         return await teardownLogic.destroy();
