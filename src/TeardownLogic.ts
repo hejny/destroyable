@@ -1,4 +1,3 @@
-import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
 import { IWork } from './IWork';
 
