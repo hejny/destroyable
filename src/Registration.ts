@@ -25,6 +25,12 @@ export class Registration extends Destroyable implements IDestroyable {
         });
     }
 
+    /**
+     * Join multiple registrations into one
+     *
+     * @param registrations
+     * @returns one registration that will be destroyed when this one is destroyed
+     */
     public static join(
         ...registrations: Array<IAwaitable<IDestroyable | undefined>>
     ): Registration {
@@ -39,7 +45,14 @@ export class Registration extends Destroyable implements IDestroyable {
             ).then(),
         );
     }
+    
 
+    /**
+     * Create registration from a subscription
+     *
+     * @param subscriptionFactory - function that will create subscription
+     * @returns registration that when destroyed will unsubscribe from the subscription
+     */
     public static fromSubscription(
         subscriptionFactory: (
             registerAdditionalSubscription: (
