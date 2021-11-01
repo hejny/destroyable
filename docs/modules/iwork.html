@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IAwaitable | Destroyable</title>
+	<title>IWork | Destroyable</title>
 	<meta name="description" content="Documentation for Destroyable">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2704,8 +2704,14 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
-			<a href="iawaitable.html#iawaitable-1" class="tsd-kind-icon">IAwaitable</a>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+			<a href="iwork.html#itick" class="tsd-kind-icon">ITick</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+			<a href="iwork.html#iwaiter" class="tsd-kind-icon">IWaiter</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+			<a href="iwork.html#iwork-1" class="tsd-kind-icon">IWork</a>
 		</li>
 	</ul>
 </nav>
@@ -2718,7 +2724,9 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Type aliases</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="iawaitable.html#iawaitable-1" class="tsd-kind-icon">IAwaitable</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="iwork.html#itick" class="tsd-kind-icon">ITick</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="iwork.html#iwaiter" class="tsd-kind-icon">IWaiter</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="iwork.html#iwork-1" class="tsd-kind-icon">IWork</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2726,27 +2734,50 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Type aliases</h2>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
-				<a name="iawaitable-1" class="tsd-anchor"></a>
-				<h3>IAwaitable</h3>
-				<div class="tsd-signature tsd-kind-icon">IAwaitable&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+				<a name="itick" class="tsd-anchor"></a>
+				<h3>ITick</h3>
+				<div class="tsd-signature tsd-kind-icon">ITick<span class="tsd-signature-symbol">:</span> <a href="iwork.html#iwork-1" class="tsd-signature-type" data-tsd-kind="Type alias">IWork</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/hejny/destroyable/blob/6394a5f/src/IAwaitable.ts#L4">src/IAwaitable.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/hejny/destroyable/blob/6394a5f/src/IWork.ts#L4">src/IWork.ts:4</a></li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<dl class="tsd-comment-tags">
-						<dt>collboard-modules-sdk</dt>
-						<dd></dd>
-					</dl>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+				<a name="iwaiter" class="tsd-anchor"></a>
+				<h3>IWaiter</h3>
+				<div class="tsd-signature tsd-kind-icon">IWaiter<span class="tsd-signature-symbol">:</span> <a href="iwork.html#iwork-1" class="tsd-signature-type" data-tsd-kind="Type alias">IWork</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/hejny/destroyable/blob/6394a5f/src/IWork.ts#L5">src/IWork.ts:5</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+				<a name="iwork-1" class="tsd-anchor"></a>
+				<h3>IWork</h3>
+				<div class="tsd-signature tsd-kind-icon">IWork<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="iawaitable.html#iawaitable-1" class="tsd-signature-type" data-tsd-kind="Type alias">IAwaitable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/hejny/destroyable/blob/6394a5f/src/IWork.ts#L3">src/IWork.ts:3</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iawaitable.html#iawaitable-1" class="tsd-signature-type" data-tsd-kind="Type alias">IAwaitable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-returns-title">Returns <a href="iawaitable.html#iawaitable-1" class="tsd-signature-type" data-tsd-kind="Type alias">IAwaitable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-					</li>
-				</ul>
 			</section>
 		</section>
 		<footer>
