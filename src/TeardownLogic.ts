@@ -1,10 +1,11 @@
 import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
+import { IWork } from './IWork';
 
 /**
  * @collboard-modules-sdk
  */
-export type ITeardownLogic = (() => IAwaitable<void>) | IDestroyable;
+export type ITeardownLogic = IWork | IDestroyable;
 
 /**
  *

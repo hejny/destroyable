@@ -2,6 +2,7 @@ import { Destroyable } from './Destroyable';
 import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
 import { ISubscription } from './ISubscription';
+import { ITick, IWaiter } from './IWork';
 import { ITeardownLogic, teardown } from './TeardownLogic';
 
 /**
@@ -51,14 +52,29 @@ export class Registration extends Destroyable implements IDestroyable {
             ).then(),
         );
     }
+    public static loop(tick: ITick): Registration;
+    public static loop(options: { tick: ITick; waiter: IWaiter }): Registration;
+    public static loop(
+        optionsOrTick: ITick | { tick: ITick; waiter: IWaiter },
+    ): Registration {
+        let tick: ITick;
+        let waiter: IWaiter;
 
-    public static loop(tick: () => IAwaitable<void>): Registration {
+        if (typeof optionsOrTick === 'function') {
+            tick = optionsOrTick;
+            waiter = () => Promise.resolve();
+        } else {
+            tick = optionsOrTick.tick;
+            waiter = optionsOrTick.waiter;
+        }
+
         return Registration.create(async ({ isDestroyed }) => {
             while (true) {
-                await tick();
+                await waiter();
                 if (isDestroyed()) {
                     return;
                 }
+                await tick();
             }
         });
     }
@@ -132,9 +148,7 @@ export class Registration extends Destroyable implements IDestroyable {
         });
     }
 
-    constructor(
-        private teardownLogic: (() => IAwaitable<void>) | IDestroyable,
-    ) {
+    constructor(private teardownLogic: ITeardownLogic) {
         super();
     }
 
