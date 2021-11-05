@@ -1,11 +1,13 @@
-import { IAwaitable } from './IAwaitable';
+import { Promisable } from 'type-fest';
 import { IDestroyable } from './IDestroyable';
 
 /**
  *
  * @collboard-modules-sdk
  */
-export async function softDestroy(destroyable: IAwaitable<IDestroyable>): Promise<void> {
+export async function softDestroy(
+    destroyable: Promisable<IDestroyable>,
+): Promise<void> {
     try {
         await (await destroyable).destroy();
     } catch (error) {

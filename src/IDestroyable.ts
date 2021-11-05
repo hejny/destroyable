@@ -1,4 +1,4 @@
-import { IAwaitable } from './IAwaitable';
+import { Promisable } from "type-fest";
 
 /**
  * Interface, all destroyable objects implement
@@ -14,5 +14,5 @@ export interface IDestroyable {
     /**
      * Destroy the object
      */
-    destroy(): IAwaitable<void>;
+    destroy(): Promisable<void>;
 }

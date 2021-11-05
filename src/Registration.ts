@@ -1,5 +1,5 @@
+import { Promisable } from 'type-fest';
 import { Destroyable } from './Destroyable';
-import { IAwaitable } from './IAwaitable';
 import { IDestroyable } from './IDestroyable';
 import { ISubscription } from './ISubscription';
 import { ITick, IWaiter } from './IWork';
@@ -20,7 +20,7 @@ export class Registration extends Destroyable implements IDestroyable {
     public static create(
         creator: (utils: {
             isDestroyed: () => boolean;
-        }) => IAwaitable<ITeardownLogic | void>,
+        }) => Promisable<ITeardownLogic | void>,
     ): Registration {
         let isDestroyed = false;
 
@@ -39,7 +39,7 @@ export class Registration extends Destroyable implements IDestroyable {
      * @returns one registration that will be destroyed when this one is destroyed
      */
     public static join(
-        ...registrations: Array<IAwaitable<IDestroyable>>
+        ...registrations: Array<Promisable<IDestroyable>>
     ): Registration {
         return new Registration(() =>
             Promise.all(
@@ -87,9 +87,9 @@ export class Registration extends Destroyable implements IDestroyable {
     public static fromSubscription(
         subscriptionFactory: (
             registerAdditionalSubscription: (
-                additionalSubscription: IAwaitable<ISubscription>,
+                additionalSubscription: Promisable<ISubscription>,
             ) => void,
-        ) => IAwaitable<ISubscription>,
+        ) => Promisable<ISubscription>,
     ): Registration {
         return Registration.create(async () => {
             const subscriptions: ISubscription[] = [];

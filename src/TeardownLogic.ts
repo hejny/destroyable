@@ -22,5 +22,4 @@ export async function teardown(
     }
 }
 
-// TODO: Make compatible with IAwaitable<IDestroyable | undefined>
 // TODO: Use in Registration.join
