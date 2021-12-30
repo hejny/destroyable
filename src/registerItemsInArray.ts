@@ -13,7 +13,6 @@ export function registerItemsInArray<TItem>({
     add,
     isEqual,
     collisionStrategy,
-    lllllTODO,
 }: IRegisterItemsOptions<TItem[], TItem>) {
     isEqual = isEqual || ((a, b) => a === b);
     collisionStrategy = collisionStrategy || 'ERROR';
