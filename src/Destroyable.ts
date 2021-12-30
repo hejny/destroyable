@@ -18,7 +18,7 @@ export abstract class Destroyable implements IDestroyable {
     private subdestroyable: ITeardownLogic[] = [];
 
     /**
-     * TODO: !!! isDestroyed
+     * Is this object destroyed?
      */
     public get isDestroyed(): boolean {
         return this._isDestroyed;

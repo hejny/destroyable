@@ -1,16 +1,16 @@
 /**
  * @collboard-modules-sdk
  */
-export interface IRegisterItemsOptions<TType /* !!! TODO: naming */, TItem> {
+export interface IRegisterItemsOptions<TBaseType, TItem> {
     /**
      * Base will be mutated in every call of registerItemsInWhateher functions and when the returned registration is destroyed
      */
-    base: TType;
+    base: TBaseType;
 
     /**
      * Add is array of items which will be added into base
      */
-    add: TType;
+    add: TBaseType;
 
     /**
      * This function will compare if two items either from base or add are equal.
@@ -25,8 +25,6 @@ export interface IRegisterItemsOptions<TType /* !!! TODO: naming */, TItem> {
      * - **OVERRIDE** will re-write existing item *(is cases of simple comparision this can behave same as SKIP)*
      */
     collisionStrategy?: 'ERROR' | 'WARN' | 'SKIP' | 'OVERRIDE';
-
-    lllllTODO?: (item: TItem | TItem[]) => any;
 }
 
 /**
