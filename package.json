@@ -7,7 +7,7 @@
     "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
     "Jonáš Rosecký <jonas@collboard.com>"
   ],
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hejny/destroyable.git"
