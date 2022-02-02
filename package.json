@@ -1,56 +1,56 @@
 {
-    "name": "destroyable",
-    "version": "0.9.0",
-    "description": "Multiple utilities that help to build destroyable objects in javascript",
-    "author": "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
-    "contributors": [
-        "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
-        "Jonáš Rosecký <jonas@collboard.com>"
-    ],
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/hejny/destroyable.git"
-    },
-    "bugs": {
-        "url": "https://github.com/hejny/destroyable/issues"
-    },
-    "homepage": "https://github.com/hejny/destroyable#readme",
-    "--type": "module",
-    "main": "./dist/index.js",
-    "--exports": {
-        "./*": "./dist/*"
-    },
-    "scripts": {
-        "build": "rm -rf ./dist && tsc",
-        "develop": "tsc --watch",
-        "preversion": "npm test && npm run lint && npm run generate-main-exports-commit && npm run build && npm run documentation-commit",
-        "postversion": "git push && git push --tags && npm publish",
-        "documentation": "typedoc --excludePrivate --hideGenerator --theme minimal --out docs --name \"Destroyable\" ./src",
-        "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
-        "test": "jest --config jestconfig.json",
-        "test-watch": "jest --config jestconfig.json --watchAll",
-        "lint": "tslint -p tsconfig.json",
-        "generate-main-exports": "ts-node ./scripts/generate-main-exports/generate-main-exports.ts",
-        "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && git add src && git commit --allow-empty -m \"Updating exports\""
-    },
-    "dependencies": {
-        "rxjs": "^6.6.2",
-        "type-fest": "^2.5.2",
-        "typescript": "^4.3.4"
-    },
-    "devDependencies": {
-        "@types/jest": "^24.0.13",
-        "glob-promise": "^3.4.0",
-        "jest": "^24.8.0",
-        "mobx": "^6.3.2",
-        "onchange": "^5.2.0",
-        "ts-jest": "^24.0.2",
-        "ts-loader": "^4.5.0",
-        "ts-node": "^8.8.2",
-        "tslint": "^5.17.0",
-        "tslint-config-prettier": "^1.18.0",
-        "typedoc": "^0.22.11",
-        "waitasecond": "^1.0.0"
-    }
+  "name": "destroyable",
+  "version": "0.9.0",
+  "description": "Multiple utilities that help to build destroyable objects in javascript",
+  "author": "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
+  "contributors": [
+    "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
+    "Jonáš Rosecký <jonas@collboard.com>"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hejny/destroyable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hejny/destroyable/issues"
+  },
+  "homepage": "https://github.com/hejny/destroyable#readme",
+  "--type": "module",
+  "main": "./dist/index.js",
+  "--exports": {
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "develop": "tsc --watch",
+    "preversion": "npm test && npm run lint && npm run generate-main-exports-commit && npm run build && npm run documentation-commit",
+    "postversion": "git push && git push --tags && npm publish",
+    "documentation": "typedoc --excludePrivate --hideGenerator --theme minimal --out docs --name \"Destroyable\" ./src",
+    "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
+    "test": "jest --config jestconfig.json",
+    "test-watch": "jest --config jestconfig.json --watchAll",
+    "lint": "tslint -p tsconfig.json",
+    "generate-main-exports": "ts-node ./scripts/generate-main-exports/generate-main-exports.ts",
+    "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && git add src && git commit --allow-empty -m \"Updating exports\""
+  },
+  "dependencies": {
+    "rxjs": "6.6.2",
+    "type-fest": "2.5.2",
+    "typescript": "4.3.4"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.13",
+    "glob-promise": "3.4.0",
+    "jest": "24.8.0",
+    "mobx": "6.3.2",
+    "onchange": "5.2.0",
+    "ts-jest": "24.0.2",
+    "ts-loader": "4.5.0",
+    "ts-node": "8.8.2",
+    "tslint": "5.17.0",
+    "tslint-config-prettier": "1.18.0",
+    "typedoc": "0.22.11",
+    "waitasecond": "1.0.0"
+  }
 }
