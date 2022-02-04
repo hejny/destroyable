@@ -13,6 +13,9 @@
 
 <!--/Badges-->
 
+Library for managing misc stuff that can be destroyed after the creation
+
+
 TODO: Write some usage and description
 
 ```bash
