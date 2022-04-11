@@ -2,9 +2,7 @@ import { AlreadyDestroyedError } from './AlreadyDestroyedError';
 import { IDestroyable } from './IDestroyable';
 import { ITeardownLogic, teardown } from './TeardownLogic';
 
-/*
- * TODO: Unite Registration and Destroyable
- */
+
 
 /**
  * Generic implementation of the IDestroyable
@@ -12,6 +10,15 @@ import { ITeardownLogic, teardown } from './TeardownLogic';
  * @collboard-modules-sdk
  */
 export abstract class Destroyable implements IDestroyable {
+
+    /**
+     * Chcek whether the given object is destroyable
+     */
+    public static isDestroyable(obj: any): obj is IDestroyable {
+        return obj && typeof obj.destroy === 'function'&& typeof obj.isDestroyed === 'boolean';
+    }
+
+
     // tslint:disable-next-line
     private _isDestroyed = false;
 
@@ -36,7 +43,7 @@ export abstract class Destroyable implements IDestroyable {
      * Binds new registration with itself. This registration/destroyable will be destroyed with this.
      */
     public addSubdestroyable(...subdestroyable: ITeardownLogic[]): this {
-        // TODO: create remove counterpart to add
+        // TODO: Create remove counterpart to add
         this.subdestroyable.push(...subdestroyable);
         return this;
     }
@@ -60,4 +67,13 @@ export abstract class Destroyable implements IDestroyable {
             );
         }
     }
+
+
+
+
 }
+
+
+/*
+ * TODO: Unite Registration and Destroyable
+ */

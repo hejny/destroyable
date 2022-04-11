@@ -110,11 +110,11 @@ export class Registration extends Destroyable implements IDestroyable {
     }
 
     /**
-     * Creates registration which is empty and has nothing to destroy
-     * Note: This is usefull for implementing null object pattern
+     * Creates a registration that is empty and has nothing to destroy
+     * Note: This is useful for implementing null object pattern
      */
-    public static void(): Registration {
-        return new Registration(() => {});
+    public static void() {
+        return new this(() => {});
     }
 
     /**
@@ -160,3 +160,14 @@ export class Registration extends Destroyable implements IDestroyable {
         await teardown(this.teardownLogic);
     }
 }
+
+
+/*
+
+class ChildRegistration extends Registration {
+
+}
+
+const a:ChildRegistration = ChildRegistration.void();
+
+*/
