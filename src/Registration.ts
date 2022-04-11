@@ -109,6 +109,10 @@ export class Registration extends Destroyable implements IDestroyable {
         });
     }
 
+    /**
+     * Creates registration which is empty and has nothing to destroy
+     * Note: This is usefull for implementing null object pattern
+     */
     public static void(): Registration {
         return new Registration(() => {});
     }
