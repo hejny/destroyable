@@ -10,7 +10,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hejny/destroyable.git"
+    "url": "https://github.com/hejny/destroyable"
   },
   "bugs": {
     "url": "https://github.com/hejny/destroyable/issues"
