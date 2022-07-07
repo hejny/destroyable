@@ -42,21 +42,21 @@ describe('how registering items in array works', () => {
 
     it('add and remove items with mobxjs observable array and sophisticated compare', async () => {
         const base: Array<{ value: number }> = observable([]);
-        const isEqual = (a: { value: number }, b: { value: number }) =>
+        const compare = (a: { value: number }, b: { value: number }) =>
             a.value === b.value;
         const registration1 = registerItemsInArray({
             base,
-            isEqual,
+            compare,
             add: [{ value: 1 }],
         });
         const registration2 = registerItemsInArray({
             base,
-            isEqual,
+            compare,
             add: [{ value: 2 }, { value: 3 }],
         });
         const registration3 = registerItemsInArray({
             base,
-            isEqual,
+            compare,
             add: [{ value: 4 }, { value: 5 }, { value: 6 }],
         });
         expect(toJS(base)).toEqual([

@@ -14,7 +14,7 @@ export function registerPairsInObject<TItem>({
     base,
     add,
     collisionStrategy,
-}: Omit<IRegisterItemsOptions<Record<string, TItem>, TItem>, 'isEqual'>) {
+}: Omit<IRegisterItemsOptions<Record<string, TItem>, TItem>, 'compare'>) {
     collisionStrategy = collisionStrategy || 'ERROR';
 
     const skippedKeys: string[] = [];

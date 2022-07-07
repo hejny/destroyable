@@ -14,9 +14,9 @@ export interface IRegisterItemsOptions<TBaseType, TItem> {
 
     /**
      * This function will compare if two items either from base or add are equal.
-     * @default isEqual value is (a, b) => a === b
+     * @default compare value is (a, b) => a === b
      */
-    isEqual?: (a: TItem, b: TItem) => boolean;
+    compare?: (a: TItem, b: TItem) => boolean;
 
     /**
      * What will happen when item from add is already in base or if item is not in base when destroing the registration.

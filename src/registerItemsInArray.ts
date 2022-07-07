@@ -11,10 +11,10 @@ import { Registration } from './Registration';
 export function registerItemsInArray<TItem>({
     base,
     add,
-    isEqual,
+    compare,
     collisionStrategy,
 }: IRegisterItemsOptions<TItem[], TItem>) {
-    isEqual = isEqual || ((a, b) => a === b);
+    compare = compare || ((a, b) => a === b);
     collisionStrategy = collisionStrategy || 'ERROR';
 
     for (const item of add) {
@@ -23,7 +23,7 @@ export function registerItemsInArray<TItem>({
 
     return new Registration(() => {
         for (const item of add) {
-            const index = base.findIndex((item2) => isEqual!(item, item2));
+            const index = base.findIndex((item2) => compare!(item, item2));
             if (index === -1) {
                 const error = new NotFoundError(
                     `Item was not found in array. Array was probbably mutated with some other function.`,

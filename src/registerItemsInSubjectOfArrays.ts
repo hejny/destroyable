@@ -6,7 +6,7 @@ import { Registration } from "./Registration";
  */
 interface IRegisterItemsInSubjectOfArrays<T> {
     /**
-     * TODO: Allow this to be omited in case of base is BehaviorSubject
+     * TODO: [🌹] Allow this to be omited in case of base is BehaviorSubject
      */
     currentValue: T[];
     base: Subject<T[]>;
