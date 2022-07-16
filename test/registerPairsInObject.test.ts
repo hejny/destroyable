@@ -48,7 +48,7 @@ describe('how registering items in record objects works', () => {
             add: { a: 1, b: 2, c: 3 },
         });
         expect(base).toEqual({ a: 1, b: 2, c: 3 });
-        expect(registration.destroy()).rejects.not.toThrowError();
+        expect(registration.destroy()).resolves.not.toThrowError();
         expect(registration.destroy()).rejects.toThrowError();
     });
 
