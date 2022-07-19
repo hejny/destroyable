@@ -94,7 +94,7 @@ describe('how registering items in array works', () => {
         const registration = registerItemsInArray({ base, add: [1, 2, 3] });
         expect(base).toEqual([1, 2, 3]);
         expect(registration.destroy()).resolves.not.toThrowError();
-        expect(registration.destroy()).resolves.toThrowError();
+        expect(registration.destroy()).rejects.toThrowError();
     });
 
     /*
