@@ -2,3 +2,4 @@
 #       And every first line will be searched during the harvesting phase
 
 Library for managing misc stuff that can be destroyed after the creation
+--version 4
