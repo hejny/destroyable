@@ -1,6 +1,5 @@
 import { Promisable } from "type-fest";
-import { IDestroyed } from "./IDestroyed";
-import { INotDestroyed } from "./INotDestroyed";
+
 
 /**
  * Represents object that can be destrioyed
