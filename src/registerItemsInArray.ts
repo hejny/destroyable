@@ -5,8 +5,6 @@ import { Registration } from './Registration';
 /**
  * Push item into array and return object representing this pushment that can be destroyed
  * Warning: this utility makes mutations on base record object
- *
- * @collboard-modules-sdk
  */
 export function registerItemsInArray<TItem>({
     base,

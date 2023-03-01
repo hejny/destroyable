@@ -7,8 +7,6 @@ import { ITeardownLogic, teardown } from './TeardownLogic';
 
 /**
  * Generic implementation of the IDestroyable
- *
- * @collboard-modules-sdk
  */
 export abstract class Destroyable implements IDestroyable {
 

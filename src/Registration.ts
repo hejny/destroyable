@@ -7,10 +7,6 @@ import { ITeardownLogic, teardown } from './TeardownLogic';
 
 /**
  * This object will be returned by register functions to unregister things
- * TODO: Unite Registration and Destroyable
- * TODO: Maybe create some Registration.create helper for MobX observe/intercept
- *
- * @collboard-modules-sdk
  */
 export class Registration extends Destroyable implements IDestroyable {
     /**
@@ -171,3 +167,8 @@ class ChildRegistration extends Registration {
 const a:ChildRegistration = ChildRegistration.void();
 
 */
+
+/**
+ * TODO: Unite Registration and Destroyable
+ * TODO: Maybe create some Registration.create helper for MobX observe/intercept
+ */

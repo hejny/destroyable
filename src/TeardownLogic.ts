@@ -2,13 +2,12 @@ import { IDestroyable } from './IDestroyable';
 import { IWork } from './IWork';
 
 /**
- * @collboard-modules-sdk
+ * @@@
  */
 export type ITeardownLogic = IWork | IDestroyable;
 
 /**
- *
- * @collboard-modules-sdk
+ * @@@
  */
 export async function teardown(
     teardownLogic?: ITeardownLogic | void,

@@ -1,8 +1,6 @@
 
 /**
  * Represents object that is destroyed
- *
- * @collboard-modules-sdk
  */
 export interface IDestroyed {
     /**

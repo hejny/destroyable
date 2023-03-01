@@ -1,5 +1,5 @@
 /**
- * @collboard-modules-sdk
+ * @@@
  */
 export interface IRegisterItemsOptions<TBaseType, TItem> {
     /**

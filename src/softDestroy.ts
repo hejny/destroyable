@@ -2,8 +2,7 @@ import { Promisable } from 'type-fest';
 import { IDestroyable } from './IDestroyable';
 
 /**
- *
- * @collboard-modules-sdk
+ * @@@
  */
 export async function softDestroy(
     destroyable: Promisable<IDestroyable>,
