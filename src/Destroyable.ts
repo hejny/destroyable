@@ -1,5 +1,6 @@
 import { AlreadyDestroyedError } from './AlreadyDestroyedError';
 import { IDestroyable } from './IDestroyable';
+import { INotDestroyed } from './INotDestroyed';
 import { ITeardownLogic, teardown } from './TeardownLogic';
 
 
@@ -31,7 +32,7 @@ export abstract class Destroyable implements IDestroyable {
         return this._isDestroyed;
     }
     public async destroy(): Promise<void> {
-        this.checkWhetherNotDestroyed();
+        this.assertNotDestroyed();
         this._isDestroyed = true;
         // console.log(`Destroying`, this);
         for (const subdestroyable of this.subdestroyable) {
@@ -52,18 +53,14 @@ export abstract class Destroyable implements IDestroyable {
      * Checks, whether the object is not destroyed
      *
      * @param errorMessage Message that will replace default one before error
-     * @param runBeforeError Callback runed before error is thrown; typically this can be some logging
      */
-    protected checkWhetherNotDestroyed(
-        errorMessage?: string,
-        runBeforeError?: () => void,
-    ) {
+    protected assertNotDestroyed(
+        errorMessage: string = `This object is already destroyed.`
+    ): asserts this is INotDestroyed {
         if (this._isDestroyed) {
-            if (runBeforeError) {
-                runBeforeError();
-            }
+
             throw new AlreadyDestroyedError(
-                errorMessage || `This object is already destroyed.`,
+                errorMessage
             );
         }
     }
