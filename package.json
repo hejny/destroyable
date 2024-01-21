@@ -51,6 +51,6 @@
         "tslint": "5.17.0",
         "tslint-config-prettier": "1.18.0",
         "typedoc": "0.22.11",
-        "waitasecond": "1.11.27"
+        "waitasecond": "^1.11.28"
     }
 }
