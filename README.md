@@ -10,6 +10,7 @@
 [![main](https://github.com/hejny/destroyable/actions/workflows/main.yml/badge.svg)](https://github.com/hejny/destroyable/actions/workflows/main.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/hejny/destroyable/badge.svg)](https://snyk.io/test/github/hejny/destroyable)
 [![Issues](https://img.shields.io/github/issues/hejny/destroyable.svg?style=flat)](https://github.com/hejny/destroyable/issues)
+[![Socket](https://socket.dev/api/badge/npm/package/destroyable)](https://socket.dev/npm/package/destroyable)
 
 <!--/Badges-->
 
