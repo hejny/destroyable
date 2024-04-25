@@ -23,3 +23,7 @@
 
 # Dependencies
 /node_modules
+
+
+# Graphics
+/assets
