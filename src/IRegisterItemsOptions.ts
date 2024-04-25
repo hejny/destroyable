@@ -1,5 +1,8 @@
 /**
- * @@@
+ * Interface for registering items options ⁘
+ * 
+ * @template TBaseType - The base type of the items.
+ * @template TItem - The type of the items.
  */
 export interface IRegisterItemsOptions<TBaseType, TItem> {
     /**
