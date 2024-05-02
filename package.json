@@ -52,5 +52,15 @@
         "tslint-config-prettier": "1.18.0",
         "typedoc": "0.22.11",
         "waitasecond": "1.11.66"
-    }
+    },
+    "funding": [
+        {
+            "type": "individual",
+            "url": "https://buymeacoffee.com/hejny"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/hejny/destroyable/blob/main/README.md#%EF%B8%8F-contributing"
+        }
+    ]
 }
