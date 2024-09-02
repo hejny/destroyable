@@ -52,8 +52,8 @@ importers:
         specifier: 0.22.11
         version: 0.22.11(typescript@4.3.4)
       waitasecond:
-        specifier: 1.11.93
-        version: 1.11.93(typescript@4.3.4)
+        specifier: 1.11.94
+        version: 1.11.94(typescript@4.3.4)
 
 packages:
 
@@ -2198,8 +2198,8 @@ packages:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}
     deprecated: Use your platform's native performance.now() and performance.timeOrigin.
 
-  waitasecond@1.11.93:
-    resolution: {integrity: sha512-th/6H4x+mE5s3AmFWbup3/L/utRtq5FfMB6lYdIO8Pt/lJH5uoAtPgE5kbHGMZVjKGxlyGlk3gGU4dwUy4/1zQ==}
+  waitasecond@1.11.94:
+    resolution: {integrity: sha512-cvSrk3w9QwYi+3iu7ZvLSVo3oCFAfD1kyFnyHFUxYWkWb/ztcP2+AbF1PI9m7A8GwbWGY8N6Yi4bIn93vb8BYw==}
 
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
@@ -4963,7 +4963,7 @@ snapshots:
     dependencies:
       browser-process-hrtime: 1.0.0
 
-  waitasecond@1.11.93(typescript@4.3.4):
+  waitasecond@1.11.94(typescript@4.3.4):
     dependencies:
       ts-essentials: 8.1.0(typescript@4.3.4)
     transitivePeerDependencies:
