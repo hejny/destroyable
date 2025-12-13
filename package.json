@@ -10,7 +10,7 @@
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hejny/destroyable"
+        "url": "git+https://github.com/hejny/destroyable.git"
     },
     "bugs": {
         "url": "https://github.com/hejny/destroyable/issues"
