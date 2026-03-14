@@ -1,6 +1,6 @@
 {
     "name": "destroyable",
-    "version": "0.12.145",
+    "version": "0.12.146",
     "description": "Library for managing misc stuff that can be destroyed after the creation",
     "author": "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
     "contributors": [
