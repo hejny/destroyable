@@ -11,33 +11,36 @@ import { IDestroyed } from './IDestroyed';
 import { INotDestroyed } from './INotDestroyed';
 import { IRegisterItemsOptions } from './IRegisterItemsOptions';
 import { ISubscription } from './ISubscription';
-import { ITick, IWaiter, IWork } from './IWork';
+import { IWork } from './IWork';
+import { ITick } from './IWork';
+import { IWaiter } from './IWork';
 import { registerItemsInArray } from './registerItemsInArray';
 import { registerItemsInSubjectOfArrays } from './registerItemsInSubjectOfArrays';
 import { registerPairsInObject } from './registerPairsInObject';
 import { Registration } from './Registration';
 import { softDestroy } from './softDestroy';
-import { ITeardownLogic, teardown } from './TeardownLogic';
+import { ITeardownLogic } from './TeardownLogic';
+import { teardown } from './TeardownLogic';
 
 export {
-  ITick,
-  IWork,
-  IWaiter,
-  teardown,
-  IDestroyed,
-  softDestroy,
-  Destroyable,
-  Registration,
-  IDestroyable,
-  ISubscription,
-  INotDestroyed,
-  NotFoundError,
-  ITeardownLogic,
-  CollisionError,
-  DestroyableLoop,
-  registerItemsInArray,
-  registerPairsInObject,
-  IRegisterItemsOptions,
-  AlreadyDestroyedError,
-  registerItemsInSubjectOfArrays
+ITick,
+IWork,
+IWaiter,
+teardown,
+IDestroyed,
+softDestroy,
+Destroyable,
+Registration,
+IDestroyable,
+ISubscription,
+INotDestroyed,
+NotFoundError,
+ITeardownLogic,
+CollisionError,
+DestroyableLoop,
+registerItemsInArray,
+registerPairsInObject,
+IRegisterItemsOptions,
+AlreadyDestroyedError,
+registerItemsInSubjectOfArrays
 };
